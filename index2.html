@@ -3,116 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniziativa di Volontariato</title>
+    <title>Villaggio Kira - A.V. Centro Famiglia ODV</title>
+    <meta name="description" content="Sostieni il progetto Villaggio Kira in Burundi. Aiutaci a costruire il Centro Salute e a garantire istruzione e futuro ai bambini. Dona ora.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS Base - Mobile First */
         :root {
-            --colore-primario: #d90429; /* Un rosso acceso per attirare l'attenzione */
-            --colore-sfondo: #f8f9fa;
-            --testo: #2b2d42;
+            --primary-color: #a0522d; /* Un colore caldo, tipo terra di Siena */
+            --secondary-color: #f4a460; /* Un colore di accento più chiaro */
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --white: #fff;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
             margin: 0;
             padding: 0;
-            color: var(--testo);
-            background-color: var(--colore-sfondo);
-            line-height: 1.6;
+            background-color: var(--bg-color);
         }
 
-        header, section, footer {
-            padding: 2rem 1.5rem; /* Spaziatura ideale per schermi piccoli */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        /* Sezione Principale (Hero) */
-        .hero {
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
             text-align: center;
-            background-color: white;
-            padding-top: 4rem;
-            padding-bottom: 4rem;
         }
 
-        h1 {
+        .btn:hover {
+            background-color: #8a4726;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--secondary-color); /* Placeholder per immagine */
+            /* Idealmente qui andrebbe un'immagine di sfondo sfumata */
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--white);
             font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            line-height: 1.2;
         }
 
-        .sottotitolo {
+        .hero p {
             font-size: 1.2rem;
-            color: #6c757d;
             margin-bottom: 2rem;
         }
 
-        /* Bottone "Come Aiutare" - In Primissimo Piano */
-        .btn-aiuta {
-            display: inline-block;
-            background-color: var(--colore-primario);
-            color: white;
-            text-decoration: none;
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(217, 4, 41, 0.3);
-            transition: transform 0.2s;
+        /* Sezioni Generali */
+        section {
+            padding: 3rem 0;
         }
 
-        .btn-aiuta:active {
-            transform: scale(0.95);
-        }
-
-        /* Sezioni di contenuto */
-        .contenuto {
-            max-width: 600px;
-            margin: 0 auto; /* Centra il contenuto su schermi più grandi */
-        }
-
-        /* Sezione Come Aiutare (Dettaglio) */
-        #come-aiutare {
-            background-color: white;
-            border-top: 2px solid #eee;
-        }
-
-        footer {
+        .section-title {
             text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Chi Siamo & Progetto */
+        .about-project-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .about-project-grid {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .project-image-container {
+            text-align: center;
+        }
+        
+        .project-image-container img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-height: 400px; /* Limita l'altezza */
+            object-fit: cover; /* Ritaglia l'immagine se necessario */
+            margin: 0 auto;
+        }
+        .caption {
             font-size: 0.9rem;
-            color: #6c757d;
+            color: #666;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        /* Testimonianze */
+        .testimonials {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Come Aiutare (Highlight) */
+        .how-to-help {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .how-to-help h2 {
+            color: var(--white);
+        }
+
+        .donation-options {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .donation-option {
+            background-color: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .donation-option h3 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .iban-box {
+            background-color: var(--white);
+            color: var(--primary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        .iban {
+            font-family: monospace;
+            font-size: 1.2rem;
+            font-weight: 700;
+            word-break: break-all;
+            margin: 1rem 0;
+        }
+
+        .fiscal-info {
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+        }
+        
+        .footer-logo {
+            max-width: 100px;
+            margin: 0 auto 1rem auto;
         }
     </style>
 </head>
 <body>
 
     <header class="hero">
-        <div class="contenuto">
-            <h1>Diamoci una mano.</h1>
-            <p class="sottotitolo">Uniti per pulire il nostro quartiere e renderlo più verde.</p>
-            <a href="#come-aiutare" class="btn-aiuta">Voglio Aiutare!</a>
+        <div class="container">
+            <h1>Villaggio Kira: Una Speranza Concreta</h1>
+            <p>Sostieni il Centro Salute e l'istruzione in Burundi. Insieme per un futuro di autonomia e dignità.</p>
+            <a href="#come-aiutare" class="btn">Dona Ora e Fai la Differenza</a>
         </div>
     </header>
 
-    <section id="progetto">
-        <div class="contenuto">
-            <h2>Cosa facciamo</h2>
-            <p>Ogni sabato mattina ci incontriamo per riqualificare le aree verdi abbandonate della città. Non serve esperienza, solo un po' di buona volontà e dei guanti da lavoro.</p>
+    <section id="chi-siamo-progetto">
+        <div class="container">
+            <div class="about-project-grid">
+                <div>
+                    <h2 class="section-title" style="text-align: left;">La Nostra Missione</h2>
+                    <p>Siamo l'<strong>Associazione Volontariato "A. V. CENTRO FAMIGLIA ODV"</strong>. La nostra storia nasce da viaggi e incontri che ci hanno cambiato la vita, portandoci a sostenere attivamente il Villaggio Kira e la comunità circostante in Burundi. Mossi dall'amore e dalla certezza che "ogni gesto conta, ogni aiuto cambia una vita", lavoriamo per portare speranza dove c'è pura sopravvivenza.</p>
+                    <h3>Il Progetto: Salute e Istruzione</h3>
+                    <p>Stiamo costruendo un <strong>Centro di Cura Diurno</strong> sulla collina di Mataka, l'unico presidio sanitario per circa 5000 abitanti. Il primo lotto è completato, ma il progetto prevede ambulatorio, farmacia, sala parto, e un reparto di degenza.</p>
+                    <p>Parallelamente, sosteniamo l'istruzione e la crescita dei bambini, inclusi i tanti orfani accolti al Villaggio Kira, attraverso asilo, doposcuola e borse di studio, per costruire un futuro autonomo.</p>
+                </div>
+                <div class="project-image-container">
+                    <img src="image_3.png" alt="Vista aerea del Centro Salute in costruzione al Villaggio Kira">
+                    <p class="caption">Il Centro Salute in costruzione: un punto di partenza fondamentale per la comunità.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="come-aiutare">
-        <div class="contenuto">
-            <h2>Come puoi partecipare</h2>
-            <p>Scegli il modo che preferisci per unirti a noi:</p>
-            <ul>
-                <li><strong>Scrivici su WhatsApp:</strong> al numero 333-1234567 per entrare nel gruppo organizzativo.</li>
-                <li><strong>Vieni sul posto:</strong> Ci troviamo ogni Sabato alle 09:00 in Piazza Garibaldi.</li>
-                <li><strong>Aiutaci a diffondere:</strong> Condividi questo sito con i tuoi amici!</li>
-            </ul>
+    <section class="bg-white">
+        <div class="container">
+            <h2 class="section-title">Voci dal Villaggio</h2>
+            <div class="testimonials">
+                <p>"Il sorriso di un bambino è la luce che illumina il mondo." - Testimonianza di un volontario</p>
+                <p style="margin-top: 1rem;">"URAKOZE" (Grazie). Una sola parola che racchiude tutto il rispetto e l'amore che questa comunità insegna.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="come-aiutare" class="how-to-help">
+        <div class="container">
+            <h2 class="section-title">Il Tuo Aiuto è Indispensabile</h2>
+            <p>Senza di te, nulla di tutto questo sarebbe possibile. Ecco come puoi contribuire concretamente:</p>
+            
+            <div class="donation-options">
+                <div class="donation-option">
+                    <h3>Adozioni e Borse di Studio (Annuali)</h3>
+                    <ul>
+                        <li>Adozione di un bimbo: <strong>€ 350</strong></li>
+                        <li>Borse di studio scuole medie: <strong>€ 400</strong></li>
+                        <li>Borse di studio superiori: <strong>€ 450</strong></li>
+                        <li>Studi universitari: <strong>€ 550</strong></li>
+                    </ul>
+                </div>
+                <div class="donation-option">
+                    <h3>Sostegno al Centro Salute</h3>
+                    <p>Fai un'<strong>offerta libera</strong> per l'acquisto di attrezzature, medicinali e per il completamento dell'ambulatorio.</p>
+                </div>
+            </div>
+
+            <div class="iban-box">
+                <h3>Dona Ora con Bonifico Bancario</h3>
+                <p>Intestato a: <strong>A.V. Centro Famiglia ODV</strong></p>
+                <p class="iban">IT 05 L 02008 30050 000100608430</p>
+                <p>Causale: Specificare il tipo di donazione (es. "Adozione a distanza", "Progetto Salute")</p>
+            </div>
+
+            <p class="fiscal-info">Tutte le offerte sono fiscalmente detraibili o deducibili al 30%.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Iniziativa Volontariato. <a href="mailto:info@esempio.it">info@esempio.it</a></p>
+        <div class="container">
+            <img src="image_4.png" alt="Logo A.V. Centro Famiglia ODV" class="footer-logo" style="clip-path: circle(40% at 50% 50%);">
+            <h3>Associazione Volontariato "A. V. CENTRO FAMIGLIA ODV"</h3>
+            <p>Via Reano 1, 10090 Buttigliera Alta (TO)</p>
+            <p>Tel./Fax: 011 93 21 622 | Email: <a href="mailto:avcentrofamigliaonlus@virgilio.it">avcentrofamigliaonlus@virgilio.it</a></p>
+            <p>Iscritta Registro Unico Nazionale Terzo Settore rep.42670/2022</p>
+            <p style="margin-top: 2rem; font-size: 0.8rem;">&copy; 2024 A.V. Centro Famiglia ODV. Tutti i diritti riservati.</p>
+        </div>
     </footer>
 
 </body>
