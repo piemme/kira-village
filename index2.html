@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniziativa di Volontariato</title>
+    <style>
+        /* CSS Base - Mobile First */
+        :root {
+            --colore-primario: #d90429; /* Un rosso acceso per attirare l'attenzione */
+            --colore-sfondo: #f8f9fa;
+            --testo: #2b2d42;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--testo);
+            background-color: var(--colore-sfondo);
+            line-height: 1.6;
+        }
+
+        header, section, footer {
+            padding: 2rem 1.5rem; /* Spaziatura ideale per schermi piccoli */
+        }
+
+        /* Sezione Principale (Hero) */
+        .hero {
+            text-align: center;
+            background-color: white;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .sottotitolo {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+
+        /* Bottone "Come Aiutare" - In Primissimo Piano */
+        .btn-aiuta {
+            display: inline-block;
+            background-color: var(--colore-primario);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(217, 4, 41, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .btn-aiuta:active {
+            transform: scale(0.95);
+        }
+
+        /* Sezioni di contenuto */
+        .contenuto {
+            max-width: 600px;
+            margin: 0 auto; /* Centra il contenuto su schermi più grandi */
+        }
+
+        /* Sezione Come Aiutare (Dettaglio) */
+        #come-aiutare {
+            background-color: white;
+            border-top: 2px solid #eee;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="contenuto">
+            <h1>Diamoci una mano.</h1>
+            <p class="sottotitolo">Uniti per pulire il nostro quartiere e renderlo più verde.</p>
+            <a href="#come-aiutare" class="btn-aiuta">Voglio Aiutare!</a>
+        </div>
+    </header>
+
+    <section id="progetto">
+        <div class="contenuto">
+            <h2>Cosa facciamo</h2>
+            <p>Ogni sabato mattina ci incontriamo per riqualificare le aree verdi abbandonate della città. Non serve esperienza, solo un po' di buona volontà e dei guanti da lavoro.</p>
+        </div>
+    </section>
+
+    <section id="come-aiutare">
+        <div class="contenuto">
+            <h2>Come puoi partecipare</h2>
+            <p>Scegli il modo che preferisci per unirti a noi:</p>
+            <ul>
+                <li><strong>Scrivici su WhatsApp:</strong> al numero 333-1234567 per entrare nel gruppo organizzativo.</li>
+                <li><strong>Vieni sul posto:</strong> Ci troviamo ogni Sabato alle 09:00 in Piazza Garibaldi.</li>
+                <li><strong>Aiutaci a diffondere:</strong> Condividi questo sito con i tuoi amici!</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Iniziativa Volontariato. <a href="mailto:info@esempio.it">info@esempio.it</a></p>
+    </footer>
+
+</body>
+</html>
